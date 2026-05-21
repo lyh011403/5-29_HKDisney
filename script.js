@@ -25,7 +25,7 @@ const parkData = [
   { id: 'f5', type: 'facility', title: '米奇幻想曲', location: '幻想世界', desc: '室內 4D 劇場，除了 3D 視覺外，還包含水花、風吹與香氣等環境體感特效。', icon: 'bx-glasses', lat: 22.312036, lng: 114.0405773, url: 'https://www.hongkongdisneyland.com/zh-hk/attractions/mickeys-philharmagic/' },
   { id: 'f6', type: 'facility', title: '小熊維尼歷險之旅', location: '幻想世界', desc: '室內慢速乘車，以實體佈景營造走入童話繪本的包覆感。', icon: 'bx-book-heart', lat: 22.3130021, lng: 114.0406946, url: 'https://www.hongkongdisneyland.com/zh-hk/attractions/many-adventures-of-winnie-the-pooh/' },
   { id: 'f7', type: 'facility', title: '森林河流之旅', location: '探險世界', desc: '戶外實地遊船，由船長真人解說，配合水面下軌道觸發的機械動物與水火特效，營造逼真叢林氛圍。', icon: 'bx-map-alt', lat: 22.3109999, lng: 114.040996, url: 'https://www.hongkongdisneyland.com/zh-hk/attractions/jungle-river-cruise/' },
-  { id: 'f8', type: 'facility', title: '童話園林', location: '幻想世界', desc: '這是一個隱藏在園區內的微縮造景花園。經典童話故事被製作成了精緻的實體微縮模型。你可以親手操作機關，觸發模型內部的齒輪與實體連動。', icon: 'bx-tree', lat: 22.3119584, lng: 114.0399312, url: 'https://www.hongkongdisneyland.com/zh-hk/attractions/fairy-tale-forest/' },
+  { id: 'f8', type: 'facility', title: '童話園林', location: '幻想世界', desc: '這是一個隱藏在園區內的微縮造景花園。經典童話故事被製作成了精緻的實體微縮模型。你可以親手操作機關，觸發模型內部的齒輪與實體連動。', icon: 'bx-leaf', lat: 22.3119584, lng: 114.0399312, url: 'https://www.hongkongdisneyland.com/zh-hk/attractions/fairy-tale-forest/' },
   { id: 'f9', type: 'facility', title: '動畫藝術教室', location: '美國小鎮大街', desc: '極具啟發性的室內體驗。專業的迪士尼動畫師一步步示範繪製經典角色，完成的畫作還可以帶回家留作紀念。', icon: 'bx-palette', lat: 22.3134244, lng: 114.0435859, url: 'https://www.hongkongdisneyland.com/zh-hk/attractions/animation-academy/' },
   
   // 迪士尼朋友會面 (NPC)
