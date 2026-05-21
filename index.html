@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>香港迪士尼樂園 - 2026/05/29 導覽</title>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#0d0e15">
+  <meta name="description" content="香港迪士尼樂園 20週年特報 2026/05/29 專屬行程與地圖導覽">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- 引入 Leaflet.js 的 CSS 與 JS 以進行高精度 GPS 地理定位 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- 頂部導覽列 -->
+  <header class="glass-header">
+    <div class="header-title">
+      <h1>🏰 香港迪士尼 20週年</h1>
+      <span class="date-badge">2026/05/29</span>
+    </div>
+    <div class="header-status">營運時間 10:00 - 20:30</div>
+  </header>
+
+  <!-- 地圖互動區 -->
+  <main id="map-container">
+    <div id="map"></div>
+    
+    <!-- 復位與定位按鈕 -->
+    <div class="map-controls">
+      <button id="locate-btn" class="glass-btn" aria-label="定位我的位置">
+        <i class='bx bx-navigation'></i>
+      </button>
+      <button id="reset-map-btn" class="glass-btn" aria-label="重置地圖視角">
+        <i class='bx bx-target-lock'></i>
+      </button>
+    </div>
+  </main>
+
+  <!-- 側邊欄 / 底部資訊面版 -->
+  <div id="bottom-sheet" class="glass-panel">
+    <div class="drag-handle-area">
+      <div class="drag-handle"></div>
+    </div>
+    
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="show">表演節目</button>
+      <button class="filter-btn" data-filter="facility">遊樂設施</button>
+      <button class="filter-btn" data-filter="character">迪士尼朋友</button>
+      <button class="filter-btn alert-filter" data-filter="alert">停駛公告</button>
+    </div>
+
+    <div id="info-list" class="info-list">
+      <!-- 動態載入項目 -->
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

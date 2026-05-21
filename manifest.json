@@ -1,0 +1,15 @@
+{
+  "name": "香港迪士尼樂園 導覽",
+  "short_name": "HKDL 導覽",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d0e15",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/823/823269.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
