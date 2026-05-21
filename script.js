@@ -167,7 +167,7 @@ function renderApp(filterType = 'all') {
           </div>
           <!-- 連接線 -->
           <svg style="position: absolute; left: -100px; top: -100px; width: 200px; height: 200px; pointer-events: none; overflow: visible; z-index: 1;">
-            <line x1="100" y1="100" x2="${100 + dx}" y2="${100 + dy - 16}" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-dasharray="4,4" />
+            <line x1="100" y1="100" x2="${100 + dx}" y2="${100 + dy - 16}" stroke="#9d88ff" stroke-width="2.5" stroke-dasharray="5,5" />
           </svg>
         `;
       });
