@@ -332,6 +332,12 @@ dragHandle.addEventListener('pointerup', (e) => {
   }
 });
 
+dragHandle.addEventListener('pointercancel', () => {
+  isSheetDragging = false;
+  bottomSheet.style.transition = 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
+  bottomSheet.style.transform = '';
+});
+
 // 分類過濾按鈕事件
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', (e) => {

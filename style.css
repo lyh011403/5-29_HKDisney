@@ -46,7 +46,9 @@ body {
   background: linear-gradient(180deg, rgba(9, 10, 15, 0.95) 0%, rgba(9, 10, 15, 0) 100%);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
   pointer-events: none;
 }
 
@@ -367,6 +369,7 @@ body {
   align-items: center;
   gap: 6px;
   cursor: grab;
+  touch-action: none; /* 解決手機瀏覽器攔截拖曳事件導致卡死的問題 */
 }
 
 .drag-handle-area:active {
