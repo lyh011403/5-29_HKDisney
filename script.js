@@ -59,8 +59,8 @@ function initMap() {
     minZoom: 15
   }).setView(PARK_CENTER, DEFAULT_ZOOM);
 
-  // 使用 CartoDB Dark Matter 地圖圖層，呈現極具質感的黑金暗黑模式
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  // 使用 CartoDB Voyager 圖層 (類似 Google Maps 的明亮清晰風格)
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 20
