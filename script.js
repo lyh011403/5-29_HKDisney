@@ -88,6 +88,10 @@ window.handleMarkerClick = function(id, lat, lng, e) {
   }
   activateItem(id);
   map.setView([lat, lng], 18, { animate: true });
+  // 手機版自動展開底部資訊面板
+  if (window.innerWidth < 768) {
+    document.getElementById('bottom-sheet').classList.add('expanded');
+  }
 };
 
 // 渲染 Marker 與 側欄/底欄清單項目
