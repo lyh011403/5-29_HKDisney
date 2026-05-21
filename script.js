@@ -288,54 +288,11 @@ locateBtn.addEventListener('click', () => {
   );
 });
 
-// ---- 底部面板拖曳邏輯 (僅限手機版) ----
-let isSheetDragging = false;
-let sheetStartY;
-let sheetStartTransform;
-
-dragHandle.addEventListener('pointerdown', (e) => {
-  isSheetDragging = true;
-  sheetStartY = e.clientY;
-  const style = window.getComputedStyle(bottomSheet);
-  if (style.transform === 'none') {
-    isSheetDragging = false; // 桌面版禁用拖曳
-    return;
+// ---- 底部面板點擊切換邏輯 (僅限手機版) ----
+dragHandle.addEventListener('click', () => {
+  if (window.innerWidth < 768) {
+    bottomSheet.classList.toggle('expanded');
   }
-  const matrix = new DOMMatrix(style.transform);
-  sheetStartTransform = matrix.m42;
-  bottomSheet.style.transition = 'none';
-  dragHandle.setPointerCapture(e.pointerId);
-});
-
-dragHandle.addEventListener('pointermove', (e) => {
-  if (!isSheetDragging) return;
-  const dy = e.clientY - sheetStartY;
-  let newY = sheetStartTransform + dy;
-  if (newY < 0) newY = 0; 
-  bottomSheet.style.transform = `translateY(${newY}px)`;
-});
-
-dragHandle.addEventListener('pointerup', (e) => {
-  if (!isSheetDragging) return;
-  isSheetDragging = false;
-  bottomSheet.style.transition = 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
-  
-  const dy = e.clientY - sheetStartY;
-  if (dy > 50) {
-    bottomSheet.classList.remove('expanded');
-    bottomSheet.style.transform = ''; 
-  } else if (dy < -50) {
-    bottomSheet.classList.add('expanded');
-    bottomSheet.style.transform = '';
-  } else {
-    bottomSheet.style.transform = '';
-  }
-});
-
-dragHandle.addEventListener('pointercancel', () => {
-  isSheetDragging = false;
-  bottomSheet.style.transition = 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
-  bottomSheet.style.transform = '';
 });
 
 // 分類過濾按鈕事件
