@@ -370,7 +370,7 @@ body {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  touch-action: manipulation; /* 適合點擊，防止雙擊縮放延遲 */
+  touch-action: none; /* 必須為 none，否則手機會將滑動視為網頁捲動而中斷事件 */
   background: transparent;
 }
 
