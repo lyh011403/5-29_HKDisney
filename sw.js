@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hkdl-pwa-v7';
+const CACHE_NAME = 'hkdl-pwa-v8';
 const urlsToCache = [
   './index.html',
   './style.css',

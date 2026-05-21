@@ -242,6 +242,11 @@ document.getElementById('reset-map-btn').addEventListener('click', () => {
   clearSelection();
 });
 
+// 展開清單切換按鈕 (手機版專用)
+document.getElementById('toggle-list-btn').addEventListener('click', () => {
+  document.getElementById('bottom-sheet').classList.toggle('expanded');
+});
+
 // GPS 定位我的位置按鈕
 const locateBtn = document.getElementById('locate-btn');
 locateBtn.addEventListener('click', () => {
