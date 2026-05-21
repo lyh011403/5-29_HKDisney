@@ -288,10 +288,37 @@ locateBtn.addEventListener('click', () => {
   );
 });
 
-// ---- 底部面板點擊切換邏輯 (僅限手機版) ----
-dragHandle.addEventListener('click', () => {
-  if (window.innerWidth < 768) {
+// ---- 底部面板點擊與手勢滑動邏輯 (僅限手機版) ----
+let pointerStartY = 0;
+let isPointerDragging = false;
+
+dragHandle.addEventListener('pointerdown', (e) => {
+  if (window.innerWidth >= 768) return;
+  pointerStartY = e.clientY;
+  isPointerDragging = false;
+  dragHandle.setPointerCapture(e.pointerId);
+});
+
+dragHandle.addEventListener('pointermove', (e) => {
+  if (Math.abs(e.clientY - pointerStartY) > 10) {
+    isPointerDragging = true;
+  }
+});
+
+dragHandle.addEventListener('pointerup', (e) => {
+  if (window.innerWidth >= 768) return;
+  const dy = e.clientY - pointerStartY;
+  
+  if (!isPointerDragging) {
+    // 視為輕觸點擊
     bottomSheet.classList.toggle('expanded');
+  } else {
+    // 視為滑動
+    if (dy < -20) {
+      bottomSheet.classList.add('expanded'); // 往上滑，展開
+    } else if (dy > 20) {
+      bottomSheet.classList.remove('expanded'); // 往下滑，收合
+    }
   }
 });
 
